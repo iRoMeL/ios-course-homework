@@ -2,15 +2,11 @@
 
 import Foundation
 
-class Record:CustomDebugStringConvertible {
+class Record {
     let date:Date
     var name:String?
     var tags:[String]?
     var text:String?
-    var debugDescription: String {
-        return self.fullDescription()
-    }
-    
     
     init(date:Date) {
         self.date = date
@@ -71,7 +67,11 @@ sortedArray
 
 
 //Додаткове 3
-
+extension Record:CustomStringConvertible{
+    var description: String {
+        return self.fullDescription()
+    }
+}
 let Entry = secondEntry
 
 print(Entry)
