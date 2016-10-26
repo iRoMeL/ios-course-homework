@@ -12,6 +12,13 @@ class Record {
         self.date = date
      }
     
+    convenience init(date:Date,name:String?,tags:[String]?,text:String?){
+        self.init(date:date)
+        self.name = name
+        self.tags = tags
+        self.text = text
+    }
+    
     func fullDescription() -> String {
         
         var fulldescription = date.description
@@ -35,6 +42,10 @@ class Record {
         return fulldescription
         
     }
+    
+    func getDateHumanReadable(date:Date) -> String {
+        return date.description
+    }
 }
 
 
@@ -43,15 +54,11 @@ let firstEntry = Record(date: Date(timeIntervalSinceNow: -3600))
 firstEntry.fullDescription()
 
 //2
-let secondEntry = Record(date: Date(timeIntervalSinceNow:-800))
-secondEntry.name = "Ніч"
-secondEntry.tags = ["кава рулить","ніч","сон"]
-secondEntry.text = "Хочу спати - рано вставати"
+let secondEntry = Record(date: Date(timeIntervalSinceNow:-600), name: "Ніч", tags: ["кава рулить","ніч","сон"], text: "Хочу спати - рано вставати")
 secondEntry.fullDescription()
 
 //3
-let thirdEntry = Record(date: Date())
-thirdEntry.text = "Хеллов"
+let thirdEntry = Record(date: Date(), name: nil, tags: nil, text: "Хеллов")
 thirdEntry.fullDescription()
 
 
