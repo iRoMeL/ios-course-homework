@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CrazyNotes/RecordCell.swift"
+            timestampString = "499468795.385451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "RecordCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrazyNotes.RecordCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; CrazyNotes.RecordCell"
+                  moduleName = "CrazyNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romel/Documents/HOMEWORK/ios-course-homework/02-crazynotes/CrazyNotes/CrazyNotes/RecordCell.swift"
+                  timestampString = "499473532.785606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrazyNotes.RecordCell.__allocating_init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; CrazyNotes.RecordCell"
+                  moduleName = "CrazyNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romel/Documents/HOMEWORK/ios-course-homework/02-crazynotes/CrazyNotes/CrazyNotes/RecordCell.swift"
+                  timestampString = "499473532.787005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrazyNotes.RecordCell.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CrazyNotes.RecordCell&gt;"
+                  moduleName = "CrazyNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romel/Documents/HOMEWORK/ios-course-homework/02-crazynotes/CrazyNotes/CrazyNotes/RecordCell.swift"
+                  timestampString = "499473532.788453"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrazyNotes.RecordCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;CrazyNotes.RecordCell&gt;"
+                  moduleName = "CrazyNotes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romel/Documents/HOMEWORK/ios-course-homework/02-crazynotes/CrazyNotes/CrazyNotes/RecordCell.swift"
+                  timestampString = "499473532.789826"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecordVC.swift"
+            timestampString = "499551114.043527"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

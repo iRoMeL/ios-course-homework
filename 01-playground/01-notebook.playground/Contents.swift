@@ -105,7 +105,7 @@ let secondEntry = Record(date: entryDate("2016/10/24 18:59"), name: "Ніч", ta
 secondEntry.fullDescription()
 
 //3
-let thirdEntry = Record(date: entryDate(""), name: nil, tags: nil, text: "Хеллов")
+let thirdEntry = Record(date: entryDate("2016/09/14 18:59"), name: nil, tags: nil, text: "Вивчаю Свіфт")
 thirdEntry.fullDescription()
 
 
