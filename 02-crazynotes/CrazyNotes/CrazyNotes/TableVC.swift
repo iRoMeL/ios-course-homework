@@ -17,8 +17,8 @@ class TableVC: UIViewController {
     //-------------------------------------
     let recordArray:[Record]  = [
         Record(date: entryDate("2001/09/11 09:11"), name:"Какайа боль"  ,tags: nil,text:"Жизнь боль......",weather: Weather.storm ),
-        Record(date: entryDate("2016/10/30 18:59"), name:"Я дурію"      ,tags: nil, text: "а ем крейзі енд е лейзі енд ай нов іт",weather: Weather.sun),
-        Record(date: entryDate("2016/10/29 18:59"), name:"Ніч"          ,tags: ["кава рулить","ніч","сон"], text: "Хочу спати - рано вставати",weather: Weather.rain),
+        Record(date: entryDate("2016/11/1 18:59"), name:"Я дурію"      ,tags: nil, text: "а ем крейзі енд е лейзі енд ай нов іт",weather: Weather.sun),
+        Record(date: entryDate("2016/11/2 18:59"), name:"Ніч"          ,tags: ["кава рулить","ніч","сон"], text: "Хочу спати - рано вставати",weather: Weather.rain),
         Record(date: entryDate("2016/09/31 23:59"), name:"Кульпарків"   ,tags: ["хз"], text: "Вивчаю Свіфт",weather: Weather.snow),
         Record(date: entryDate("2016/10/21 17:00"), name:"Наполеон"     ,tags: ["хз"], text: "ЙА БОХ",weather: Weather.rain),
         Record(date: entryDate("2016/09/14 18:59"), name:"ХЗ"           ,tags: ["хз"], text: "ХТО ЗНАЄ ДЕ ЗНАЙДЕШ А ДЕ ЗАГУБИШ",weather: Weather.snow),
@@ -37,7 +37,8 @@ class TableVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //navigationController?.hidesBarsOnSwipe = true
+        //оновленнйа таблиці
+        tableView.reloadData()
     }
 
   

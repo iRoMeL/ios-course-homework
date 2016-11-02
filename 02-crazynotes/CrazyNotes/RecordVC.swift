@@ -8,12 +8,14 @@
 
 import UIKit
 
-class RecordVC: UIViewController {
+class RecordVC: UITableViewController {
 
-    @IBOutlet weak var recordMood: UISegmentedControl!
-    @IBOutlet weak var recordName: UILabel!
     @IBOutlet weak var recordText: UITextView!
-
+    
+    @IBOutlet weak var recordName: UITextField!
+    
+    @IBOutlet weak var recordMood: UISegmentedControl!
+    
     private var _recordEntry:Record!
     
     var record:Record{

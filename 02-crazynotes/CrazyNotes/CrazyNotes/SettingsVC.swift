@@ -15,11 +15,7 @@ class SettingsVC: UITableViewController {
     
     @IBAction func ChangeNLS(_ sender: UISwitch) {
         
-        if NLS.isOn {
-            Record.NaturalLanguage = true
-        }else{
-            Record.NaturalLanguage = false
-        }
+       UserDefaults.standard.set(NLS.isOn, forKey: "humanReadableDates")
       
     }
     
@@ -29,7 +25,16 @@ class SettingsVC: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let humanReadableDates = UserDefaults.standard.object(forKey: "humanReadableDates") as? Bool {
+           NLS.isOn = humanReadableDates
+        }else{
+            
+           UserDefaults.standard.set(true, forKey: "humanReadableDates")
+           NLS.isOn = true
+        }
+        
+        
         
         // Do any additional setup after loading the view.
     }

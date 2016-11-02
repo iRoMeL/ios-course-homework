@@ -8,78 +8,111 @@
     </dependencies>
     <scenes>
         <!--RecordVC-->
-        <scene sceneID="Oh1-AI-Lkj">
+        <scene sceneID="Z0Y-tR-z7K">
             <objects>
-                <viewController id="Uji-hm-fAG" customClass="RecordVC" customModule="CrazyNotes" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eIR-Va-WzH"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wl7-1X-ESU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RsK-hd-gBl">
+                <tableViewController id="tCH-xc-O5t" customClass="RecordVC" customModule="CrazyNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ckl-UJ-IYn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TQN-1S-3gI">
-                                <segments>
-                                    <segment title="" image="weather_cloud"/>
-                                    <segment title="" image="weather_rain"/>
-                                    <segment title="" image="weather_snow"/>
-                                    <segment title="" image="weather_storm"/>
-                                    <segment title="" image="weather_sun"/>
-                                </segments>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;New entry&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4h-8h-QCc">
-                                <accessibility key="accessibilityConfiguration" hint="&lt;New entry&gt;">
-                                    <accessibilityTraits key="traits" none="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="5dR-4Z-7RJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="pJ8-SH-E4B"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="21" id="xEY-m4-gMi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AkC-bK-DRI">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Crazy Notes">
-                                        <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TQN-1S-3gI" secondAttribute="trailing" constant="84" id="EwU-hE-B3h"/>
-                            <constraint firstItem="k4h-8h-QCc" firstAttribute="top" secondItem="TQN-1S-3gI" secondAttribute="bottom" constant="8" id="IVk-7d-cLp"/>
-                            <constraint firstItem="Wl7-1X-ESU" firstAttribute="top" secondItem="TQN-1S-3gI" secondAttribute="bottom" constant="567" id="TZS-ja-mWl"/>
-                            <constraint firstItem="Wl7-1X-ESU" firstAttribute="top" secondItem="AkC-bK-DRI" secondAttribute="bottom" constant="20" id="Xaq-TO-NNF"/>
-                            <constraint firstItem="k4h-8h-QCc" firstAttribute="leading" secondItem="RsK-hd-gBl" secondAttribute="leadingMargin" id="Z2d-DU-Aob"/>
-                            <constraint firstItem="TQN-1S-3gI" firstAttribute="centerX" secondItem="RsK-hd-gBl" secondAttribute="centerX" id="aWx-kD-vNH"/>
-                            <constraint firstItem="AkC-bK-DRI" firstAttribute="top" secondItem="k4h-8h-QCc" secondAttribute="bottom" constant="8" id="aXw-ZD-syN"/>
-                            <constraint firstItem="TQN-1S-3gI" firstAttribute="top" secondItem="eIR-Va-WzH" secondAttribute="bottom" id="dLO-b4-UV2"/>
-                            <constraint firstItem="AkC-bK-DRI" firstAttribute="leading" secondItem="RsK-hd-gBl" secondAttribute="leadingMargin" id="jWx-rC-967"/>
-                            <constraint firstItem="k4h-8h-QCc" firstAttribute="top" secondItem="TQN-1S-3gI" secondAttribute="bottom" constant="8" id="pYt-R9-7B3"/>
-                            <constraint firstItem="AkC-bK-DRI" firstAttribute="trailing" secondItem="RsK-hd-gBl" secondAttribute="trailingMargin" id="wqZ-Sw-r55"/>
-                            <constraint firstItem="k4h-8h-QCc" firstAttribute="leading" secondItem="RsK-hd-gBl" secondAttribute="leadingMargin" id="x4j-1g-JQ7"/>
-                            <constraint firstItem="TQN-1S-3gI" firstAttribute="top" secondItem="eIR-Va-WzH" secondAttribute="bottom" id="zgv-Kp-csw"/>
-                        </constraints>
-                    </view>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="QLZ-Jn-XiB" userLabel="Запис">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="36" id="ZDF-9e-q5H">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZDF-9e-q5H" id="Ace-k7-JJ1">
+                                            <frame key="frameInset" width="375" height="35"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-mA-MOy" userLabel="Mood">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="28" id="Cbz-JC-rSv"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="" image="weather_cloud"/>
+                                                        <segment title="" image="weather_rain"/>
+                                                        <segment title="" image="weather_snow"/>
+                                                        <segment title="" image="weather_storm"/>
+                                                        <segment title="" image="weather_sun"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pfu-mA-MOy" firstAttribute="top" secondItem="Ace-k7-JJ1" secondAttribute="top" id="b4i-F7-Eyg"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pfu-mA-MOy" secondAttribute="trailing" constant="55" id="cBp-9v-4D5"/>
+                                                <constraint firstItem="Pfu-mA-MOy" firstAttribute="leading" secondItem="Ace-k7-JJ1" secondAttribute="leading" constant="55" id="rHI-JG-Xk3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Тема" id="HOu-4F-2zU" userLabel="Тема">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KdG-s6-Kbv">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KdG-s6-Kbv" id="mUr-n2-eei">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aXv-Yr-4bJ" userLabel="Record Name">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aXv-Yr-4bJ" firstAttribute="leading" secondItem="mUr-n2-eei" secondAttribute="leading" constant="8" id="GuY-PY-JN6"/>
+                                                <constraint firstAttribute="bottom" secondItem="aXv-Yr-4bJ" secondAttribute="bottom" constant="8" id="MVD-ec-NTE"/>
+                                                <constraint firstAttribute="trailing" secondItem="aXv-Yr-4bJ" secondAttribute="trailing" constant="8" id="ST9-dB-kKE"/>
+                                                <constraint firstItem="aXv-Yr-4bJ" firstAttribute="top" secondItem="mUr-n2-eei" secondAttribute="top" constant="5" id="d81-Rp-8lV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Запис" id="qEg-ak-za6" userLabel="Запис">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="UQn-o4-jlX">
+                                        <rect key="frame" x="0.0" y="200" width="375" height="172"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UQn-o4-jlX" id="qa7-XN-4MM">
+                                            <frame key="frameInset" width="375" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-Xs-HiR">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TKr-Xs-HiR" firstAttribute="leading" secondItem="qa7-XN-4MM" secondAttribute="leading" constant="8" id="BCd-Go-Kfw"/>
+                                                <constraint firstAttribute="trailing" secondItem="TKr-Xs-HiR" secondAttribute="trailing" constant="8" id="Rhd-03-yxA"/>
+                                                <constraint firstItem="TKr-Xs-HiR" firstAttribute="top" secondItem="qa7-XN-4MM" secondAttribute="top" id="hVp-l8-8HM"/>
+                                                <constraint firstAttribute="bottom" secondItem="TKr-Xs-HiR" secondAttribute="bottom" id="uDh-0B-Yhr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tCH-xc-O5t" id="bBK-UK-gF1"/>
+                            <outlet property="delegate" destination="tCH-xc-O5t" id="wXo-I0-uOr"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <outlet property="recordMood" destination="TQN-1S-3gI" id="0Ho-dN-Ugl"/>
-                        <outlet property="recordName" destination="k4h-8h-QCc" id="ZQS-gk-evF"/>
-                        <outlet property="recordText" destination="AkC-bK-DRI" id="Dha-nE-dw2"/>
+                        <outlet property="recordMood" destination="Pfu-mA-MOy" id="CCw-Gg-8IC"/>
+                        <outlet property="recordName" destination="aXv-Yr-4bJ" id="sqa-DI-nm3"/>
+                        <outlet property="recordText" destination="TKr-Xs-HiR" id="Dos-mQ-L0g"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a1m-aH-wLf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuF-KR-PUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="87.706146926536732"/>
+            <point key="canvasLocation" x="1765.5999999999999" y="87.706146926536732"/>
         </scene>
         <!--Settings-->
         <scene sceneID="D8I-pU-oga">
@@ -169,10 +202,10 @@
                                 <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Record" editingAccessoryType="disclosureIndicator" rowHeight="69" id="f8w-aa-sc9" customClass="RecordCell" customModule="CrazyNotes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="1000" height="69"/>
+                                        <rect key="frame" x="0.0" y="92" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f8w-aa-sc9" id="May-20-qBk">
-                                            <frame key="frameInset" width="818" height="69"/>
+                                            <frame key="frameInset" width="342" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeL-bl-khx">
@@ -233,7 +266,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Uly-5L-uRO" id="xZS-g0-RCo"/>
-                        <segue destination="Uji-hm-fAG" kind="show" identifier="RecordVC" id="49Q-OD-Afj"/>
+                        <segue destination="tCH-xc-O5t" kind="show" identifier="RecordVC" id="HJs-Ud-cPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XR3-EP-kZL" userLabel="First Responder" sceneMemberID="firstResponder"/>

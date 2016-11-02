@@ -35,9 +35,49 @@ enum Weather:Int {
     case  cloud = 4
 }
 
+class UserSettings{
+    
+    var humanReadableDates:Bool{
+        get{
+            
+            return (UserDefaults.standard.object(forKey: "humanReadableDates") != nil)
+            
+        }
+        set{
+         
+            UserDefaults.standard.set(newValue, forKey: "humanReadableDates")
+            
+        }
+    }
+    
+    
+    init() {
+        
+      self.humanReadableDates = true
+        
+    }
+    
+  
+    
+}
+
+
+//Щоденник
+class RecordBook{
+    fileprivate var records:[Record]
+    
+    init() {
+        records = []
+    }
+    
+    
+    
+    
+}
+
 //Запис в щоденнику
 class Record {
-    static var NaturalLanguage = true
+    
     let date:Date
     var name:String?
     var tags:[String]?
@@ -51,7 +91,14 @@ class Record {
         formatter.locale = myLocale
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
-        formatter.doesRelativeDateFormatting = Record.NaturalLanguage
+        
+        if let humanReadableDates = UserDefaults.standard.object(forKey: "humanReadableDates") as? Bool {
+             formatter.doesRelativeDateFormatting = humanReadableDates
+        }else{
+            
+             UserDefaults.standard.set(true, forKey: "humanReadableDates")
+             formatter.doesRelativeDateFormatting = true
+        }
         
         return formatter.string(from: self.date)
         }
