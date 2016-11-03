@@ -13,19 +13,40 @@ class TableVC: UIViewController {
     
     @IBOutlet weak var tableView:UITableView!
 
-    //масив записів в щоденику
-    //-------------------------------------
-    let recordArray:[Record]  = [
-        Record(date: entryDate("2001/09/11 09:11"), name:"Какайа боль"  ,tags: nil,text:"Жизнь боль......",weather: Weather.storm ),
-        Record(date: entryDate("2016/11/1 18:59"), name:"Я дурію"      ,tags: nil, text: "а ем крейзі енд е лейзі енд ай нов іт",weather: Weather.sun),
-        Record(date: entryDate("2016/11/2 18:59"), name:"Ніч"          ,tags: ["кава рулить","ніч","сон"], text: "Хочу спати - рано вставати",weather: Weather.rain),
-        Record(date: entryDate("2016/09/31 23:59"), name:"Кульпарків"   ,tags: ["хз"], text: "Вивчаю Свіфт",weather: Weather.snow),
-        Record(date: entryDate("2016/10/21 17:00"), name:"Наполеон"     ,tags: ["хз"], text: "ЙА БОХ",weather: Weather.rain),
-        Record(date: entryDate("2016/09/14 18:59"), name:"ХЗ"           ,tags: ["хз"], text: "ХТО ЗНАЄ ДЕ ЗНАЙДЕШ А ДЕ ЗАГУБИШ",weather: Weather.snow),
-        Record(date: entryDate("2016/09/14 18:59"), name:"Кукувруку"    ,tags: ["хз"], text: "Какімакі і до фікі нагінакі",weather: Weather.sun)
-    ].sorted(){$0.date>$1.date}
-    //--------------------------------------
     
+    var recordBook:RecordBook?{
+        didSet {
+        invalidateDisplayedRecords()
+    }
+    }
+    
+    
+    fileprivate var _displayedRecordsArray: [Record]?
+        
+        
+    //масив записів в щоденику
+    var recordArray:[Record]  {
+        if let cachedArray = _displayedRecordsArray {
+            return cachedArray
+        }
+        if let recordBook = recordBook {
+            _displayedRecordsArray = recordBook.allRecord
+            return _displayedRecordsArray!
+        }
+        return []
+        }
+        
+    fileprivate func invalidateDisplayedRecords(animated: Bool = false) {
+        _displayedRecordsArray = nil
+    if animated {
+        tableView?.reloadSections(IndexSet(integer: 0), with: UITableViewRowAnimation.automatic)
+    } else {
+        tableView?.reloadData()
+        }
+    }
+    
+
+    //--------------------------------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,4 +109,5 @@ extension TableVC:UITableViewDataSource {
         return UITableViewCell()
         
     }
+    
 }
