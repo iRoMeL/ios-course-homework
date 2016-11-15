@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomView" customModule="CrazyNotes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaC-al-DEu" customClass="CustomLines" customModule="CrazyNotes" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSm-re-od7">
+                            <rect key="frame" x="80" y="8" width="34" height="34"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNd-uA-B0o">
+                                    <rect key="frame" x="4" y="4" width="27" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="Ghj-BS-6ea"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="UGD-x6-jAF"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="zSu-zy-nly">
+                            <rect key="frame" x="122" y="8" width="77.5" height="34"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="&lt;Entry&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeP-ed-CS5">
+                                    <rect key="frame" x="8" y="0.0" width="61.5" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="CHd-pf-aSS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="UeP-ed-CS5" secondAttribute="bottom" id="3p5-8Y-b3J"/>
+                                <constraint firstItem="UeP-ed-CS5" firstAttribute="top" secondItem="zSu-zy-nly" secondAttribute="top" id="Bdj-T5-CZd"/>
+                                <constraint firstItem="UeP-ed-CS5" firstAttribute="leading" secondItem="zSu-zy-nly" secondAttribute="leading" constant="8" id="D7y-qF-jRc"/>
+                                <constraint firstAttribute="height" constant="34" id="T8t-fr-o99"/>
+                                <constraint firstAttribute="trailing" secondItem="UeP-ed-CS5" secondAttribute="trailing" constant="8" id="wuM-rw-CrF"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UES-Xu-aoL">
+                            <rect key="frame" x="8" y="15" width="64" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SEP 14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5x-QJ-JEc">
+                                    <rect key="frame" x="8" y="0.0" width="48" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="64" id="0Vn-Co-4jb"/>
+                                <constraint firstAttribute="height" constant="20" id="8cL-PE-arf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="NSm-re-od7" firstAttribute="bottom" secondItem="UES-Xu-aoL" secondAttribute="bottom" constant="7" id="1LF-lv-9vc"/>
+                        <constraint firstAttribute="bottom" secondItem="UES-Xu-aoL" secondAttribute="bottom" constant="15" id="DUp-hA-nSV"/>
+                        <constraint firstItem="zSu-zy-nly" firstAttribute="top" secondItem="ZaC-al-DEu" secondAttribute="top" constant="8" id="H8u-oQ-tWz"/>
+                        <constraint firstItem="zSu-zy-nly" firstAttribute="leading" secondItem="NSm-re-od7" secondAttribute="trailing" constant="8" id="MAd-hG-7AT"/>
+                        <constraint firstItem="UES-Xu-aoL" firstAttribute="leading" secondItem="ZaC-al-DEu" secondAttribute="leading" constant="8" id="P2c-HN-dcU"/>
+                        <constraint firstAttribute="bottom" secondItem="zSu-zy-nly" secondAttribute="bottom" constant="8" id="gMb-hc-1ZR"/>
+                        <constraint firstItem="NSm-re-od7" firstAttribute="leading" secondItem="UES-Xu-aoL" secondAttribute="trailing" constant="8" id="h4s-jA-VIn"/>
+                        <constraint firstItem="UES-Xu-aoL" firstAttribute="top" secondItem="ZaC-al-DEu" secondAttribute="top" constant="15" id="kqK-0j-13E"/>
+                        <constraint firstItem="NSm-re-od7" firstAttribute="top" secondItem="ZaC-al-DEu" secondAttribute="top" constant="8" id="mmO-4X-DvY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZaC-al-DEu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8pR-xR-IhJ"/>
+                <constraint firstItem="ZaC-al-DEu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JYZ-Tn-etv"/>
+                <constraint firstAttribute="bottom" secondItem="ZaC-al-DEu" secondAttribute="bottom" id="aEk-Tc-5qn"/>
+                <constraint firstAttribute="trailing" secondItem="ZaC-al-DEu" secondAttribute="trailing" id="qjW-QN-mw4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerDate" destination="UES-Xu-aoL" id="zIH-VB-rt7"/>
+                <outlet property="containerImage" destination="NSm-re-od7" id="ymE-oa-xOK"/>
+                <outlet property="containerText" destination="zSu-zy-nly" id="LMD-Qi-mlz"/>
+                <outlet property="customLines" destination="ZaC-al-DEu" id="Pyl-vd-ml2"/>
+                <outlet property="entryDate" destination="i5x-QJ-JEc" id="1Pl-8T-9WR"/>
+                <outlet property="entryText" destination="UeP-ed-CS5" id="Hox-Xn-OkH"/>
+                <outlet property="imageMood" destination="MNd-uA-B0o" id="j9j-IW-lux"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </view>
+    </objects>
+</document>
